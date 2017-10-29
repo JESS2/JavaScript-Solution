@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hw8_4</title>
+    <script>
+        //hw8_4
+        //201332032 정소연
+
+        //Book 생성자 함수
+        function Book(title, price, year, author) {
+            this.title = title;
+            this.price = price;
+            this.year = year;
+            this.author = author;
+        }
+
+        //books 배열
+        var books = [];
+        var exp = [];
+
+        //배열에 3개의 책 정보 입력
+        books.push(new Book('java', 10000, 2014, '정우성'));
+        books.push(new Book('database', 20000, 2013, '장동건'));
+        books.push(new Book('computer', 30000, 2009, '강동원'));
+
+        var output = '가격이 비싼 순서로 정렬 : \n';
+
+        for (var i = 0; i < books.length; i++) {
+            for(var j=0; j < books.length-1; j++){
+                if(books[j].price < books[j+1].price){
+                    var value = books[j];
+                    books[j] = books[j+1];
+                    books[j+1] = value;
+                }
+            }
+        }
+
+        for(var i in books) {
+            output += books[i].title + ' ' + books[i].price + ' ' + books[i].year + ' ' + books[i].author + '\n';
+        }
+
+        output += '\n가격이 비싼 2권 : \n';
+
+        for(var i=0; i<2; i++) {
+            exp[i] = books[i];
+        }
+
+        for(var i in exp) {
+            output += exp[i].title + ' ' + exp[i].price + ' ' + exp[i].year + ' ' + exp[i].author + '\n';
+        }
+
+        alert(output);
+    </script>
+</head>
+<body>
+</body>
+</html>

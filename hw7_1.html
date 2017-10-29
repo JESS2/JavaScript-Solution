@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hw7_1</title>
+    <script>
+        //hw7_1
+        //201332032 정소연
+
+        //Book 생성자 함수
+        function Book(title, price, year, author) {
+            this.title = title;
+            this.price = price;
+            this.year = year;
+            this.author = author;
+        }
+
+        //books 배열
+        var books = [];
+
+        //배열에 3개의 책 정보 입력
+        books.push(new Book('java', 10000, 2014, '정우성'));
+        books.push(new Book('database', 20000, 2013, '장동건'));
+        books.push(new Book('computer', 30000, 2009, '강동원'));
+
+        //세 책의 정보 출력
+        var output = '세 책의 정보 : \n';
+        for(var i in books) {
+            output += books[i].title + ' ' + books[i].price + ' ' + books[i].year + ' ' + books[i].author + '\n';
+        }
+
+        output += '\n세 책의 재고할인 후 정보 출력 : \n';
+
+        Book.prototype.discount = function() {
+            //  재고할인 - 매개변수는 없고, 발행연도가 2014면 10% 할인, 그 전이면 50% 할인하여 가격을 변경함
+            if(this.year==2014) {
+                return this.price = this.price*0.9;
+            }
+            else {
+                return this.price = this.price*0.5;
+            }
+        };
+
+
+        for(var i in books) {
+            output += books[i].title + ' ' + books[i].discount() + ' ' + books[i].year + ' ' + books[i].author + '\n';
+        }
+
+        alert(output);
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

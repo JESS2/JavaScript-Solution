@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hw8_2</title>
+    <script>
+        //hw8_2
+        //201332032 정소연
+
+        var str = prompt('입력 : ', '');
+        var len = str.length;
+
+        //a,A개수
+        var strUpper = str.toUpperCase();
+        var count = (strUpper.match(/A/g) || []).length;
+
+        //*로 문자열변경
+        var str2 = str.replace(/A/gi, "*");
+
+        alert('문장 = ' + str + '\n' + '길이 = ' + len + '\n' + 'a 또는 A의 개수 = ' + count + '\n' + str2);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

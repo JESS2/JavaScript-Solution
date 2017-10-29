@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hw8_3</title>
+    <script>
+        //hw8_3
+        //201332032 정소연
+
+        var email = prompt('이메일 입력 : ', '');
+
+        //co.kr, com, net, or.kr, go.kr이 포함돼 있는지 그리고 @
+
+        var cokr = email.indexOf("co.kr");
+        var com = email.indexOf("com");
+        var net = email.indexOf("net");
+        var orkr = email.indexOf("or.kr");
+        var gokr = email.indexOf("go.kr");
+        var num = email.indexOf("@");
+
+        if(cokr != -1 || com != -1 || net != -1 || orkr != -1 || gokr != -1) {
+            if(num != -1) {
+                document.write(email);
+            } else {
+                alert("유효하지 않음");
+            }
+        } else {
+            alert("유효하지 않음");
+        }
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

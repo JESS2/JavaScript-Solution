@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hw6_2</title>
+    <script>
+        //hw6_2
+        //201332032 정소연
+
+        var book = {
+            title: 'c',
+            price: 20000,
+            year: 2017
+        };
+
+        book.author = 'jessie';
+
+        var output = '';
+        with(book) {
+            output += 'title : ' + title + '\n';
+            output += 'price : ' + price + '\n';
+            output += 'year : ' + year + '\n';
+            output += 'author : ' + author + '\n';
+        }
+
+        alert(output);
+            
+    </script>
+</head>
+<body>
+</body>
+</html>
