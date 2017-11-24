@@ -1,1 +1,1 @@
-# JavaScript-Solution
+# JavaScript & jQuery Solution
