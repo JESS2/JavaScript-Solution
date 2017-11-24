@@ -1,0 +1,39 @@
+<!-- - 아래 작업을 하도록 jquery를 사용하여 완성하시오
+
+<body>
+<ul id="myList">
+  <li>내용1</li>
+  <li>내용2</li>
+  <li>내용3</li>
+  <li>내용4</li>
+</ul>
+</body>
+
+- not 방식를 이용하여 첫번째 li요소만 제외한 li의 배경색을 노란색으로 적용하여라 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hw15_2</title>
+    <script src = "http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src = "http://code.jquery.com/jquery-2.1.0-vsdoc.js"></script>
+    <script>
+        //hw15_2
+        //201332032 정소연
+        $(document).ready(function() {
+            //not 방식를 이용하여 첫번째 li요소만 제외한 li의 배경색을 노란색으로 적용
+        	$('#myList > li').not('li:first').css('background-color', 'yellow');
+        });
+
+    </script>
+</head>
+<body>
+	<ul id="myList">
+      <li>내용1</li>
+      <li>내용2</li>
+      <li>내용3</li>
+      <li>내용4</li>
+    </ul>
+</body>
+</html>
