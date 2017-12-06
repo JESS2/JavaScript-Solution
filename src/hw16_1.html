@@ -1,0 +1,44 @@
+<!-- 
+- 아래 작업을 하도록 jquery를 사용하여 완성하시오
+
+<body>
+   <button id="btn1">click</button>
+   <button id="btn2">dblclick</button>
+   <p>내용</p>
+</body>
+
+- btn1 클릭했을 때 p의 태그의 배경을 yellow로
+- btn2 더블 클릭했을 때 p의 태그 배경을 purple로 변경하시오. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hw16_1</title>
+    <script src = "http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src = "http://code.jquery.com/jquery-2.1.0-vsdoc.js"></script>
+    <script>
+        //hw16_1
+        //201332032 정소연
+        $(document).ready(function() {
+
+			// btn1 클릭했을 때 p의 태그의 배경을 yellow로 변경
+			$('#btn1').on('click', function() {
+				$('p').css('background-color', 'yellow');
+			})
+
+			// btn2 더블 클릭했을 때 p의 태그 배경을 purple로 변경
+        	$('#btn2').dblclick(function() {
+				$('p').css('background-color', 'purple');
+			})
+
+        });
+
+    </script>
+</head>
+<body>
+   <button id="btn1">click</button>
+   <button id="btn2">dblclick</button>
+   <p>내용</p>
+</body>
+</html>

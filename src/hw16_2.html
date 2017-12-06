@@ -1,0 +1,66 @@
+<!-- - 아래 작업을 하도록 jquery를 사용하여 완성하시오
+
+hw11_1을 jquery를 사용해서 구현하시오.
+
+- 다음 이벤트가 발생한 요소의 src 속성을 바꾸세요.
+  - 첫번째 버튼은 클릭했을 시
+  - 두번째 버튼은 마우스를 버튼에 올렸을 있을 때와 없을 때 - hover() 사용
+  - 세번째 버튼은 두번째 효과 외로 키보드로 버튼에 포커스가 있을 때 없을 때
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hw16_2</title>
+    <script src = "http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src = "http://code.jquery.com/jquery-2.1.0-vsdoc.js"></script>
+    <script>
+        //hw16_2
+        //201332032 정소연
+        $(document).ready(function() {
+          // 첫번째 버튼 클릭했을 시 이미지 변경
+          $('#btn1').on('click', function() {
+          	$('#img1').attr('src','images/click_btn_on.png');
+          })
+
+		  // 두번째 버튼 마우스를 버튼에 올렸을 있을 때와 없을 때 - hover() 사용
+          $('#btn2').hover(function() {
+          	$('#img2').attr('src','images/over_btn_on.png');
+          }, function() {
+          	$('#img2').attr('src','images/over_btn_out.png');
+          })
+
+		  // 세번째 버튼 두번째 효과 외로 키보드로 버튼에 포커스가 있을 때 없을 때 
+		  $('#btn3').mouseout(function() {
+          	$('#img3').attr('src','images/out_btn_out.png');
+          }, function() {
+          	$('#img3').attr('src','images/out_btn_on.png');
+          })
+
+
+        });
+
+    </script>
+</head>
+<body>
+	 <h1>마우스 클릭했을 때 이미지 변경</h1>
+	 <p>( images/click_btn_out.png → images/click_btn_on.png )</p>
+	 <p><a href="#" id="btn1">
+	    <img src="images/click_btn_out.png" id="img1" />
+	 </a></p>
+
+	 <h1>마우스 오버했을 때 이미지 변경</h1>
+	 <p>( images/over_btn_out.png → images/over_btn_on.png )</p>
+	 <p><a href="#" id="btn2">
+	    <img src="images/over_btn_out.png" id="img2" />
+	 </a></p>
+
+	 <h1>마우스 아웃했을 때 이미지 변경</h1>
+	 <p>( images/out_btn_out.png → images/out_btn_on.png )</p>
+	 <p><a href="#" id="btn3">
+	    <img src="images/out_btn_out.png" id="img3" />
+	 </a></p>
+</body>
+</html>
