@@ -25,15 +25,15 @@ hw11_1을 jquery를 사용해서 구현하시오.
           	$('#img1').attr('src','images/click_btn_on.png');
           })
 
-		  // 두번째 버튼 마우스를 버튼에 올렸을 있을 때와 없을 때 - hover() 사용
+		      // 두번째 버튼 마우스를 버튼에 올렸을 있을 때와 없을 때 - hover() 사용
           $('#btn2').hover(function() {
           	$('#img2').attr('src','images/over_btn_on.png');
           }, function() {
           	$('#img2').attr('src','images/over_btn_out.png');
           })
 
-		  // 세번째 버튼 두번째 효과 외로 키보드로 버튼에 포커스가 있을 때 없을 때 
-		  $('#btn3').mouseout(function() {
+  		    // 세번째 버튼 두번째 효과 외로 키보드로 버튼에 포커스가 있을 때 없을 때 
+  		    $('#btn3').mouseout(function() {
           	$('#img3').attr('src','images/out_btn_out.png');
           }, function() {
           	$('#img3').attr('src','images/out_btn_on.png');

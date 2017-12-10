@@ -40,7 +40,29 @@
         //hw16_4
         //201332032 정소연
         $(document).ready(function() {
-          
+          var font_size = 12;
+            $('#txt_wrap').css('font-size', font_size)
+
+            // + 버튼을 누르면 글의 font-size가 1 증가
+            $('dd.zoom button').eq(0).click(function() {
+                $('#txt_wrap').css('font-size', ++font_size)
+            })
+
+            // - 버튼을 누르면 font-size가 1 감소
+            $('dd.zoom button').eq(2).click(function() {
+                $('#txt_wrap').css('font-size', --font_size)
+            })
+
+            // 0 버튼을 누르면 기본값 12로
+            $('dd.zoom button').eq(1).click(function() {
+                font_size = 12;
+                $('#txt_wrap').css('font-size', font_size)
+            })
+
+            // select 색상을 변경하면 글의 색상을 변경 - change() 이벤트 사용
+            $('dd.f_style').change(function(event) {
+                $('#txt_wrap').css('color', event.target.value)
+            })
         });
 
     </script>
